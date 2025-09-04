@@ -1,0 +1,84 @@
+.message {
+	padding: 12px;
+	border-radius: 8px 8px 8px 0px;
+	background-color: var(--light-color);
+	color: var(--dark-color);
+	display: flex;
+	gap: 8px;
+	box-shadow: -4px 4px 4px rgba(34, 34, 40, 0.1);
+
+	&.message--mine {
+		border-radius: 8px 8px 0px 8px;
+		background-color: var(--primary-color);
+		color: var(--light-color);
+
+		.message__time {
+			color: var(--light-color);
+		}
+	}
+}
+
+.message__avatar {
+	position: relative;
+	width: 48px;
+	height: 48px;
+	flex: 0 0 48px;
+	background-color: var(--light-color);
+
+	img {
+		border-radius: 50%;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.message__dot {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	border: 2px solid var(--light-color);
+	background-color: var(--green-color);
+}
+
+.message__wrap {
+	display: grid;
+	gap: 8px;
+}
+
+.message__author {
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.message__text {
+	font-size: 18px;
+}
+
+.message__quote {
+	background: url('../icons/quote.svg') 98% 2% / 20px 20px no-repeat, var(--quote-color);
+	padding: 0px 8px;
+	border-radius: 0 4px 4px 0;
+	border-left: 3px solid var(--orange-color);
+	-webkit-line-clamp: 6;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	display: -moz-box;
+	-moz-box-orient: vertical;
+	-moz-line-clamp: 6;
+	overflow: hidden;
+}
+
+.message__time {
+	font-size: 14px;
+	color: var(--grey-color);
+	font-weight: 300;
+	justify-self: end;
+}

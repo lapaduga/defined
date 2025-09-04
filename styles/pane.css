@@ -1,0 +1,55 @@
+.pane {
+	position: fixed;
+	bottom: 40px;
+	right: 20px;
+	width: calc(100% - 40px);
+	height: calc(100% - 80px);
+	max-width: 420px;
+	max-height: 620px;
+	display: grid;
+	grid-template-rows: 1fr 60px;
+	gap: 20px;
+
+	@media (max-width: 425px) {
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100vw;
+		height: 100dvh;
+		max-height: none;
+		max-width: none;
+		grid-template-rows: 1fr;
+	}
+}
+
+.scroll-down {
+	position: absolute;
+	bottom: 156px;
+	right: 12px;
+	color: var(--grey-color);
+	border: 1px solid var(--grey-color);
+	transition: color 0.2s ease, border-color 0.2s ease;
+	cursor: pointer;
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	display: grid;
+	place-content: center;
+	background-color: var(--light-color);
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.2s ease, visibility 0.2s ease;
+
+	&._disappear {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--black-color);
+			border-color: var(--black-color);
+		}
+	}
+}

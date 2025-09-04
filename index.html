@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/style.css">
+        <title>Defined Test</title>
+    </head>
+    <body>
+        <div class="pane" data-pane>
+            <div class="chat bg-milk" data-chat>
+                <button type="button" class="scroll-down" data-scroll-down>
+                    <svg width="16" height="16">
+                        <use xlink:href="./icons/sprites.svg#arrow-down"/>
+                    </svg>
+                </button>
+                <header class="chat__header bg-primary light-color">
+                    <div class="container">
+                        <div class="chat__header-wrap">
+                            <div class="chat__avatar">
+                                <svg width="32" height="32">
+                                    <use xlink:href="./icons/sprites.svg#logo"/>
+                                </svg>
+                            </div>
+                            <div class="chat__caption">
+                                <div class="chat__name">Техподдержка</div>
+                                <div class="chat__messenger-name">Вербосити</div>
+                            </div>
+                            <button type="button" class="chat__close" data-chat-close>
+                                <svg width="16" height="16">
+                                    <use xlink:href="./icons/sprites.svg#close"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </header>
+                <div class="chat__body" data-scroll>
+                    <div class="chat__body-wrap">
+                        <div class="message message--mine">
+                            <div class="message__wrap">
+                                <div class="message__author">Вы</div>
+                                <div class="message__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt officiis sapiente natus assumenda quibusdam asperiores nobis quasi repudiandae quam inventore ipsum molestias, sed quia aspernatur optio deleniti delectus non atque.</div>
+                                <span class="message__time">10:30</span>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="message__avatar">
+                                <img
+                                    src="./img/ava.jfif"
+                                    alt=""
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                                <span class="message__dot"></span>
+                            </div>
+                            <div class="message__wrap">
+                                <div class="message__author">Михаил</div>
+                                <div class="message__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt officiis sapiente natus assumenda quibusdam asperiores nobis quasi repudiandae quam inventore ipsum molestias, sed quia aspernatur optio deleniti delectus non atque.</div>
+                                <span class="message__time">10:30</span>
+                            </div>
+                        </div>
+                        <div class="message message--mine">
+                            <div class="message__wrap">
+                                <div class="message__author">Вы</div>
+                                <div class="message__quote">
+                                    <div class="message__author">Михаил</div>
+                                    <div class="message__text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, harum ipsa. Facere totam incidunt quaerat odio iusto illo sequi dolores explicabo, accusamus molestiae saepe vitae iure, eligendi dicta quia? Pariatur.
+                                    </div>
+                                </div>
+                                <div class="message__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt officiis sapiente natus assumenda quibusdam asperiores nobis quasi repudiandae quam inventore ipsum molestias, sed quia aspernatur optio deleniti delectus non atque.
+                                </div>
+                                <span class="message__time">10:30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="chat__footer bg-light">
+                    <div class="container">
+                        <form class="chat__footer-wrap">
+                            <textarea class="chat__footer-textarea" placeholder="Напишите сообщение"></textarea>
+                            <button type="button" class="chat__send-button">
+                                <svg width="24" height="24">
+                                    <use xlink:href="./icons/sprites.svg#arrow-right"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </footer>
+            </div>
+            <button type="button" class="chat-toggle" data-chat-toggle>
+                <svg width="32" height="32">
+                    <use xlink:href="./icons/sprites.svg#messages"/>
+                </svg>
+            </button>
+        </div>
+        <script src="./js/app.js"></script>
+    </body>
+</html>
