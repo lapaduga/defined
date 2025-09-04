@@ -80,8 +80,23 @@ const handleScroll = () => {
 	});
 }
 
+const handleFocus = () => {
+	const textarea = document.querySelector('[data-textarea]')
+
+	if (!textarea) return;
+
+	textarea.addEventListener('focus', () => {
+		if (
+			window.innerWidth < 425 ||
+			window.innerHeight < 500
+		) {
+			textarea.scrollIntoView();
+		}
+	});
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 	handleClicks();
 	handleScroll();
+	handleFocus();
 });
