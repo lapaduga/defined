@@ -19,6 +19,10 @@
 	@media (max-width: 425px) {
 		border-radius: 0;
 	}
+
+	@media (max-height: 500px) {
+		border-radius: 0;
+	}
 }
 
 .chat__header-wrap {
@@ -27,6 +31,10 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 12px;
+
+	@media (max-height: 500px) {
+		padding: 4px 0;
+	}
 }
 
 .chat__avatar {
@@ -101,6 +109,10 @@
 	@media (max-width: 425px) {
 		max-height: none;
 	}
+
+	@media (max-height: 500px) {
+		max-height: none;
+	}
 }
 
 .chat__body-wrap {
@@ -125,16 +137,24 @@
 	align-items: center;
 	padding: 12px 0;
 	gap: 12px;
+
+	@media (max-height: 500px) {
+		padding: 4px 0;
+	}
 }
 
 .chat__footer-textarea {
 	resize: none;
 	flex: 1 1 auto;
 	height: 100%;
-	field-sizing: content;
-	max-height: 100px;
+	max-height: 50px;
 	padding: 8px 0;
 	color: var(--black-color);
+
+	@media (max-height: 500px) {
+		max-height: 38px;
+		padding: 4px 0;
+	}
 }
 
 .chat__send-button {

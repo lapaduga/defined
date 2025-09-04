@@ -20,12 +20,38 @@
 		max-height: none;
 		max-width: none;
 		grid-template-rows: 1fr;
+
+		&:has(._active) {
+			.chat-toggle {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+
+	@media (max-height: 500px) {
+		max-height: none;
+		max-width: none;
+		grid-template-rows: 1fr;
+		height: 100dvh;
+		width: 100vw;
+		top: 0;
+		left: 0;
+		right: 0;
+		left: 0;
+
+		&:has(._active) {
+			.chat-toggle {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
 	}
 }
 
 .scroll-down {
 	position: absolute;
-	bottom: 156px;
+	bottom: 170px;
 	right: 12px;
 	color: var(--grey-color);
 	border: 1px solid var(--grey-color);
@@ -51,5 +77,13 @@
 			color: var(--black-color);
 			border-color: var(--black-color);
 		}
+	}
+
+	@media (max-width: 425px) {
+		bottom: 100px;
+	}
+
+	@media (max-height: 500px) {
+		bottom: 60px;
 	}
 }

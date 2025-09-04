@@ -10,10 +10,14 @@
 	place-content: center;
 	animation: pulse 2s infinite;
 	justify-self: end;
+	opacity: 1;
+	visibility: visible;
 	transition:
 		background-color .2s ease,
 		border-color .2s ease,
-		color .2s ease;
+		color .2s ease,
+		opacity .2s ease,
+		visibility .2s ease;
 
 	@media (any-hover: hover) {
 		&:hover {
@@ -24,6 +28,12 @@
 	}
 
 	@media (max-width: 425px) {
+		position: absolute;
+		bottom: 72px;
+		right: 12px;
+	}
+
+	@media (max-height: 500px) {
 		position: absolute;
 		bottom: 72px;
 		right: 12px;
