@@ -85,12 +85,15 @@ const handleFocus = () => {
 
 	if (!textarea) return;
 
+	const pane = document.querySelector('[data-pane]');
+
 	textarea.addEventListener('focus', () => {
 		if (
 			window.innerWidth < 425 ||
 			window.innerHeight < 500
 		) {
 			textarea.scrollIntoView();
+			pane.scrollTop = pane.scrollHeight;
 		}
 	});
 }
